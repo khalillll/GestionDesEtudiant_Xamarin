@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Modifier_Admin_Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="200" />
+                    <!--Auto takes as much space as possible-->
+                </Grid.ColumnDefinitions>
+                <Label IsVisible="False" Text="{Binding Id}" x:Name="id"></Label>
+
+                <Entry x:Name="username" Grid.Row="0" Grid.Column="1" Text="{Binding Username}"/>
+                
+                <Entry x:Name="password" Grid.Row="1" Grid.Column="1" Placeholder="passowrd"/>
+                
+                <Entry x:Name="confirmpassword" Grid.Row="2" Grid.Column="1" Placeholder="confirm password"/>
+                
+                
+            </Grid>
+            <Button Text="Modifier" Clicked="Modifier_Button_Clicked" TextColor="White"></Button>
+            <Button Text="Supprimer" Clicked="Supprimer_Button_Clicked" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

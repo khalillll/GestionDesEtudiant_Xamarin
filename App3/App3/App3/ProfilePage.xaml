@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.ProfilePage">
+    <ContentPage.Content>
+        <Grid>
+            <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout>
+                <Label Text="Profile"
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="20"/>
+                <ListView x:Name="AdminListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Admin_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell TextColor="White" Text="{Binding Username}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

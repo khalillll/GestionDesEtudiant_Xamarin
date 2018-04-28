@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.RegisterAdmin">
+    <ContentPage.Content>
+        <Grid>
+            <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout>
+
+                <Entry x:Name="username" Placeholder="username" />
+                <Entry IsPassword="True" x:Name="password" Placeholder="password" />
+                <Entry IsPassword="True" x:Name="cpassword" Placeholder="confirm password" />
+                <Button Text="register" Clicked="Add_Button_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

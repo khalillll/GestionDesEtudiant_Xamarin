@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Filiere_Page">
+    <ContentPage.Content>
+        <Grid>
+            <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="75" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="Auto" />
+                        <!--Auto takes as much space as possible-->
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="ID :"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="1"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="NOM FILIERE :"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="Genie"/>
+                </Grid>
+                <Button Text="Modifier" Clicked="Modify_Clicked"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

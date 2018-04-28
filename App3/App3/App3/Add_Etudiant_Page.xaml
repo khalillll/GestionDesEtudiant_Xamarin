@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Add_Etudiant_Page">
+    <ContentPage.Content>
+        <Grid>
+            <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout>
+            
+                
+
+            <Entry x:Name="cne" Placeholder="CNE :" Text="111"/>
+            <Entry x:Name="nom" Placeholder="NOM :" Text="aaa"/>
+            <Entry x:Name="prenom" Placeholder="PRENOM :" Text="bbb"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="Date de naissance :"/>
+            <DatePicker x:Name="date" />
+
+            <Picker x:Name="picker" SelectedIndexChanged="OnFiliereChosen">
+
+                <Picker.Items>
+
+                </Picker.Items>
+            </Picker>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="40" />
+                        <!--Auto takes as much space as possible-->
+                    </Grid.ColumnDefinitions>
+                    <Button  x:Name="sub" Grid.Row="0" Grid.Column="0" Text="-" Clicked="Subs_Clicked"/>
+                    <Entry x:Name="abs" Grid.Row="0" Grid.Column="1" Text="{Binding Absence}"/>
+                    <Button  x:Name="plus" Grid.Row="0" Grid.Column="2" Text="+" Clicked="Plus_Clicked"/>
+                </Grid>
+                <Button Text="Ajouter" Clicked="Add_Button_Clicked"></Button>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

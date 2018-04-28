@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Add_Filiere_Page">
+    <ContentPage.Content>
+        <Grid>
+        <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+        <StackLayout>
+            
+
+
+            <Entry x:Name="nom_filiere" Placeholder="Nom filiere :" Text="aaa"/>
+
+
+            <Button Text="Ajouter" Clicked="Add_Button_Clicked"></Button>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

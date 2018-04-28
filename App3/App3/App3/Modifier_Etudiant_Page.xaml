@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Modifier_Etudiant_Page">
+    <ContentPage.Content>
+        <Grid>
+            <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="200" />
+                        <!--Auto takes as much space as possible-->
+                    </Grid.ColumnDefinitions>
+                    <Label FontSize="12" Grid.Row="0" Grid.Column="0" Text="CNE :"/>
+                    <Entry x:Name="cne" Grid.Row="0" Grid.Column="1" Text="{Binding Cne}"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="NOM :"/>
+                    <Entry x:Name="nom" Grid.Row="1" Grid.Column="1" Text="{Binding Nom}"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="PRENOM :"/>
+                    <Entry x:Name="prenom" Grid.Row="2" Grid.Column="1" Text="{Binding Prenom}"/>
+                    <Label Grid.Row="5" Grid.Column="0" Text="Absence :"/>
+
+                    <Grid Grid.Row="5" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="40" />
+                            <!--Auto takes as much space as possible-->
+                        </Grid.ColumnDefinitions>
+                        <Button  x:Name="sub" Grid.Row="0" Grid.Column="0" Text="-" Clicked="Subs_Clicked"/>
+                        <Entry x:Name="abs" Grid.Row="0" Grid.Column="1" Text="{Binding Absence}"/>
+                        <Button  x:Name="plus" Grid.Row="0" Grid.Column="2" Text="+" Clicked="Plus_Clicked"/>
+                    </Grid>
+                    
+                    
+                    
+                    <Label FontSize="12" Grid.Row="3" Grid.Column="0" Text="Date de naissance :"/>
+                    <DatePicker x:Name="date" Grid.Row="3" Grid.Column="1"/>
+                    <Label Grid.Row="4" Grid.Column="0" Text="Filiere :"/>
+                    <Picker x:Name="picker" Grid.Row="4" Grid.Column="1" >
+
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Button Text="Modifier" Clicked="Modifier_Button_Clicked" TextColor="White"></Button>
+                <Button Text="Supprimer" Clicked="Supprimer_Button_Clicked" TextColor="White"></Button>
+                <Label Text="{Binding Id}" x:Name="id" IsVisible="False"></Label>
+                
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

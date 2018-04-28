@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.EtudiantPage">
+    <ContentPage.Content>
+        <Grid>
+            <Image Opacity="1"
+                   Source="background.png"
+                   Aspect="AspectFill"/>
+            <StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="75" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="Auto" />
+                        <!--Auto takes as much space as possible-->
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="CNE :" />
+                    <Label x:Name="cne" Grid.Row="0" Grid.Column="1" Text="{Binding Cne}" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="NOM :" />
+                    <Label x:Name="nom" Grid.Row="1" Grid.Column="1" Text="{Binding Nom}" />
+                    <Label Grid.Row="2" Grid.Column="0" Text="PRENOM :" />
+                    <Label x:Name="prenom" Grid.Row="2" Grid.Column="1" Text="{Binding Prenom}" />
+                    <Label Grid.Row="3" Grid.Column="0" Text="Date de naissance :" />
+                    <Label x:Name="date" Grid.Row="3" Grid.Column="1" Text="{Binding Date_naiss}" />
+                </Grid>
+                <Button Text="Modifier" Clicked="Modify_Clicked"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

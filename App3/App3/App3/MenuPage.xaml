@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.MenuPage"
+             xmlns:local="clr-namespace:App3"
+                  NavigationPage.HasBackButton="False">
+    <MasterDetailPage.Master>
+        <ContentPage Title="MasterPage"
+                     NavigationPage.HasBackButton="False">
+            <StackLayout>
+                <Label Text="Menu" FontSize="30" />
+                <Button Text="gestion des etudiant" Clicked="Gestion_etudiant_clicked"/>
+                <Button Text="gestion des filiere" Clicked="Gestion_filiere_clicked"/>
+                <Button Text="statistique" Clicked="Stats_clicked" />
+                <Button Text="Profil" Clicked="Profil_clicked" />
+                <Button Text="Conseil Disciplinaire" Clicked="Conseil_clicked" />
+                <Button Text="Logout" Clicked="Logout_clicked" />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <local:Gestion_des_EtudiantPage/>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
